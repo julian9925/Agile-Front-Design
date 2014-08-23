@@ -1,0 +1,17 @@
+body {
+  font-family: Lucida Grande, Arial, sans-serif;
+  font-size: 15px;
+  color: #777777;
+  background: black;
+}
+
+a {
+  color: #777777;
+  text-decoration: none;
+}
+a:hover {
+  color: #d4e9eb;
+}
+a:active {
+  color: #b1d7db;
+}

@@ -1,0 +1,12 @@
+<template name="layout">
+    {{> yield "topbar"}}
+    {{> yield "logo"}}
+    <div class="menu">
+        {{> yield "menu"}}
+    </div>
+    <div class="main">
+      {{> yield "main_body"}}
+      {{> yield "nav"}}
+      {{> yield "videoShow"}}
+    </div>
+</template>

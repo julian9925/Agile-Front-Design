@@ -1,0 +1,26 @@
+.main_body {
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.main_body section {
+    position: relative;
+    text-align: center;
+    top: -60px;
+    margin: auto;
+    width: 800px;
+    height: 120px;
+}
+    
+.main_body section .title {
+    font-size: 40px;
+    color: #f6364d;
+}
+
+.main_body section .content {
+    font-size: 30px;
+    color: white;
+}
+
