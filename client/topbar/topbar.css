@@ -1,16 +1,16 @@
-ul {
+ul.top {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+li.top {
     float: left;
 }
 
-a {
+a.top {
     display: block;
     width: 60px;
-    background-color: #dddddd;
+    background-color: #111111;
 }

@@ -1,0 +1,32 @@
+.logo {
+	  	 display: block;
+		
+		-webkit-margin-before: 0.67em;
+		-webkit-margin-after: 0.67em;
+		-webkit-margin-start: 10px;
+		-webkit-margin-end: 0px;
+		font-weight: bold;
+		font-family: impact, sans-serif;
+		font-size: 60px;
+		letter-spacing: 1.2pt;
+		word-spacing: -7pt;
+		z-index: 20px;
+
+}
+
+@font-face {
+  font-family: Graublau Sans Web;
+  src: url(GraublauWeb.otf) format("opentype");
+}
+/*.lp {
+	margin-top: 10px
+}*/
+
+img {
+	position:absolute;
+	height: 75px;
+	width: 75px;
+	left:96px;
+    top:40px;
+	z-index: 100px;
+}
