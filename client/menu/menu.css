@@ -1,51 +1,88 @@
-/*Nell wrote menu trigger*/
-/*
-.menu {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 350px;
-  background: black;
-  z-index: 980;
+body {
+  background: #444;
 }
-.menu .menu_trigger {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 35px;
-  height: 40px;
-  background: transparent;
+
+#toggle {
+  z-index: 999;
+  position:fixed;
+
+  right: 0px;
+  margin-right: 10%;
+  display: block;
+
+  width: 25px;
+  height: 22px;
+  top: 40px;
+  
 }
-.menu .menu_trigger span {
-  position: absolute;
+
+#toggle div {
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: white;
-  -webkit-transition: all 0.15s;
-  -moz-transition: all 0.15s;
-  -o-transition: all 0.15s;
-  transition: all 0.15s;
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
+  margin: 5px 0px 5px 0px;
+  transition: all 0.3s;
 }
-.menu .menu_trigger span:nth-child(1) {
-  top: 15px;
+
+#toggle.on .one {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-.menu .menu_trigger span:nth-child(2) {
-  top: 25px;
+
+#toggle.on .two {
+  opacity: 0;
 }
-.menu .menu_trigger span:nth-child(3) {
-  top: 35px;
+
+#toggle.on .three {
+  transform: rotate(-45deg) translate(7px, -8px);
 }
-.menu .menu_trigger:hover span:nth-child(1) {
-  top: 12px;
+
+#menu {
+  display: none;
+  transition: all 0.3s;
+  z-index: 998;
+  color: white;
+  width: 360px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  
+  
+  text-align: center;
+  position:fixed;
+  display:block;
+  background: #242422;
+    
+  right:0px;
+
+  padding-top: 140px;
+  padding-right: 10%;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align: right;
+  box-sizing:border-box;
+  
+  margin-right: -360px;
 }
-.menu .menu_trigger:hover span:nth-child(2) {
-  top: 25px;
+
+#menu.on{
+  margin-right: 0px;
 }
-.menu .menu_trigger:hover span:nth-child(3) {
-  top: 38px;
+
+.page-menu{
+  font-family: "proxima-nova", sans-serif;
+  font-weight: normal;
+  line-height: 1.75;
+  color: #757572;
+  font-size: 32px;
+  text-align: right;
 }
-*/
+
+.page-content{
+  font-family: "proxima-nova", sans-serif;
+  font-weight: normal;
+  line-height: 1.75;
+  color: #f6364d;
+  font-size: 20px;
+  text-align: right;
+}
+
