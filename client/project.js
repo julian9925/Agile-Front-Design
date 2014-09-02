@@ -8,8 +8,7 @@
         main_body: {to: "main_body"},
         logo:      {to: "logo"}
     }
-});*/
-/*
+});
 Router.map(function () {
     this.route("", "layout");
 });*/
