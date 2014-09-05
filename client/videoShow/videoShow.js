@@ -8,13 +8,15 @@ console.log("Youtube api enter");
 
 
 console.log("Youtube api sec enter");
-var player;
+//var player;
 onYouTubeIframeAPIReady = function() {
     console.log("Youtube api ready");
     player = new YT.Player('player', {
         height: '195',
         width: '260',
         videoId: 'ErQ6tNEFulg',
+        playlist: 'ErQ6tNEFulg', 
+        loop: 1, 
         events: {
             'onReady': onPlayerReady,
             //'onStateChange': onPlayerStateChange
@@ -23,6 +25,9 @@ onYouTubeIframeAPIReady = function() {
 }
 
 function onPlayerReady(event) {
+    console.log(event);
+    // event.target.setLoop({loopPlayLists:true});
+    event.target.o.loop = 1;
     event.target.setVolume(0);
     event.target.playVideo();
 }
