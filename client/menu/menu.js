@@ -10,11 +10,11 @@ Template.menu.events({
         $("#menu").toggleClass("on", 1000);
         if (flag) {
             // if the video is playing, pause it.
-            $("#player").animate({transform: "scale(.7, .7)", opacity: "0.3"});
+            $("#player").stop().animate({transform: "scale(.7, .7)", opacity: "0.3"});
             player.pauseVideo();
         } else {
             // if the video is paused, play it.
-            $("#player").animate({transform: "scale(1.25, 1.25)", opacity: "0.7"});
+            $("#player").stop().animate({transform: "scale(1, 1)", opacity: "0.7"});
             player.playVideo();
         }
         flag = !flag;
