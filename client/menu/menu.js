@@ -3,7 +3,7 @@
   //$("#menu").slideToggle();
 });
 */
-if(Meteor.isClient)
+/*if(Meteor.isClient)
 {
   $(document).ready(function(){
     $("#toggle").click(function() {
@@ -13,5 +13,19 @@ if(Meteor.isClient)
       $("#menu").toggleClass("on");
     });
   });  
-}
+}*/
 
+flag = true;
+
+Template.menu.events({
+    "click #toggle": function (e) {
+        $("#toggle").toggleClass("on");
+        $("#menu").toggleClass("on");
+        if (flag) {
+            player.pauseVideo();
+        } else {
+            player.playVideo();
+        }
+        flag = !flag;
+    }
+});
