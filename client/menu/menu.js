@@ -1,30 +1,19 @@
-/*$(".menu-trigger").click(function() {
-  $(this).toggleClass("after");
-  //$("#menu").slideToggle();
-});
-*/
-/*if(Meteor.isClient)
-{
-  $(document).ready(function(){
-    $("#toggle").click(function() {
-      $(this).toggleClass("on");
-      //$(this).show("#menu", { direction: "left" }, 1000);
 
-      $("#menu").toggleClass("on");
-    });
-  });  
-}*/
-
+// true if video is playing, false if video is paused.
 flag = true;
 
 Template.menu.events({
+    // Use template click event to handle video scale / show menu
     "click #toggle": function (e) {
+        // Menu button, fade in menu
         $("#toggle").toggleClass("on", 1000);
         $("#menu").toggleClass("on", 1000);
         if (flag) {
+            // if the video is playing, pause it.
             $("#player").animate({transform: "scale(.7, .7)", opacity: "0.3"});
             player.pauseVideo();
         } else {
+            // if the video is paused, play it.
             $("#player").animate({transform: "scale(1.25, 1.25)", opacity: "0.7"});
             player.playVideo();
         }
