@@ -15,3 +15,11 @@ a:hover {
 a:active {
   color: #b1d7db;
 }
+
+.center-text {
+    text-align: center;
+}
+
+.bold-text {
+    font-weight: 900;
+}
