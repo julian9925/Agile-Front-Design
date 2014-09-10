@@ -21,5 +21,7 @@ a:active {
 }
 
 .bold-text {
+    margin-bottom: 15px;
+    color: #fff;
     font-weight: 900;
 }
