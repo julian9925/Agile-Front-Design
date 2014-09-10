@@ -8,21 +8,30 @@
 }
 
 .main_body .page {
+    position: relative;
 /*     height: 100px; */
     height: 100%;
 /*     width: 800px; */
     width: 100%;
-    margin-top: -50px;
+/*     margin-top: -50px; */
     text-align: center;
 }
     
 .main_body .title {
+    position: absolute;
     font-size: 40px;
     color: #f6364d;
+    top: 50%;
+    left: 50%;
+    margin: 1px 0 0 -20%;
 }
 
 .main_body .content {
     font-size: 30px;
     color: white;
+}
+
+.main_body .page:nth-child(2n) {
+    background: blue;
 }
 
