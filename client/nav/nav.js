@@ -8,13 +8,19 @@ Template.nav.events({
 Template.nav.rendered = function () {
 	
 	var anchors = $('.nav > a');
-
+	var currentIndex = 0;
 	$(window).on('scroll', function(event) {
-
 	    var jqThis = $(this);
 	    var index = Math.round(jqThis.scrollTop() / this.innerHeight);
 
-	    anchors.removeClass("active");
-	    anchors.eq(index).addClass("active");
+	    // console.log("on scroll");
+	    if(currentIndex === index) {
+	    	return;
+	    }
+
+	    // console.log("page change");
+    	anchors.removeClass("active");
+    	anchors.eq(index).addClass("active");
+    	currentIndex = index;
 	});
 };
