@@ -38,3 +38,16 @@
     background-image:url("/images/page1.jpg");
     
 }
+
+.main_body .page.page2{
+    background-image:url("/images/page2.jpg");
+    
+}
+
+.main_body .page.page3{
+    background-image:url("/images/page3.jpg");
+    
+}
+.main_body .page.page4{
+    background-image:url("/images/page4.jpg");
+    }
