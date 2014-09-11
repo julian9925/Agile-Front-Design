@@ -15,6 +15,7 @@
     width: 100%;
 /*     margin-top: -50px; */
     text-align: center;
+    background-size:cover;
 }
     
 .main_body .title {
@@ -31,7 +32,22 @@
     color: white;
 }
 
-.main_body .page:nth-child(2n) {
-    background: blue;
+
+/* --- page1 --- */
+.main_body .page.page1{
+    background-image:url("/images/page1.jpg");
+    
 }
 
+.main_body .page.page2{
+    background-image:url("/images/page2.jpg");
+    
+}
+
+.main_body .page.page3{
+    background-image:url("/images/page3.jpg");
+    
+}
+.main_body .page.page4{
+    background-image:url("/images/page4.jpg");
+    }
