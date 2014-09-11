@@ -12,7 +12,7 @@ Template.nav.rendered = function () {
 	$(window).on('scroll', function(event) {
 
 	    var jqThis = $(this);
-	    var index = parseInt(jqThis.scrollTop() / this.innerHeight, 10);
+	    var index = Math.round(jqThis.scrollTop() / this.innerHeight);
 
 	    anchors.removeClass("active");
 	    anchors.eq(index).addClass("active");
