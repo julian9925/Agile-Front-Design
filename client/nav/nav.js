@@ -1,12 +1,21 @@
 Template.nav.events({
     'click .nav > a': function(event) {
-        $(event.target).siblings().removeClass('active');
-        $(event.target).addClass('active');
+    	console.log('nav click');
+    	console.log(event.target);
+    	
+    	console.log(event.target.className);
+    	var mynum=event.target.className;
+    	mynum=mynum.replace('nav','');
+    	console.log(mynum);
+
+    	$(window).scrollTop($('#pageTwo').offset().top); 
+    	console.log($('#pageTwo').offset().top);
+		console.log('nav click2');
+
     }
 });
 
 Template.nav.rendered = function () {
-	
 	var anchors = $('.nav > a');
 	var currentIndex = 0;
 	$(window).on('scroll', function(event) {

@@ -9,11 +9,8 @@
 
 .main_body .page {
     position: relative;
-/*     height: 100px; */
     height: 100%;
-/*     width: 800px; */
     width: 100%;
-/*     margin-top: -50px; */
     text-align: center;
     background-size:cover;
 }
@@ -22,9 +19,9 @@
     position: absolute;
     font-size: 40px;
     color: #f6364d;
-    top: 50%;
-    left: 50%;
-    margin: 1px 0 0 -20%;
+    top: 45%;
+    width:100%;
+    text-align: center;
 }
 
 .main_body .content {
@@ -36,12 +33,23 @@
 /* --- page1 --- */
 .main_body .page.page1{
     background-image:url("/images/page1.jpg");
-    
+}
+
+.main_body .page1 .title {
+    color: green;
+}
+
+.main_body .page1 .title .bold-text {
+    color: rgba(255, 89, 0, 0.5);
 }
 
 .main_body .page.page2{
     background-image:url("/images/page2.jpg");
     
+}
+
+.main_body .page2 .title {
+    color: green;
 }
 
 .main_body .page.page3{
@@ -50,4 +58,9 @@
 }
 .main_body .page.page4{
     background-image:url("/images/page4.jpg");
-    }
+}
+
+.title .bold-text {
+    color: yellow;
+    font-size: 80px;
+}
