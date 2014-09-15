@@ -27,6 +27,8 @@ Template.nav.rendered = function () {
 	    	return;
 	    }
 
+        player[index != 0 ? "pauseVideo" : "playVideo"]();
+
 	    // console.log("page change");
     	anchors.removeClass("active");
     	anchors.eq(index).addClass("active");
