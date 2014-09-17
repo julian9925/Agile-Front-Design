@@ -1,32 +1,16 @@
 .logo {
-	  	 display: block;
-		
-		-webkit-margin-before: 0.67em;
-		-webkit-margin-after: 0.67em;
-		-webkit-margin-start: 10px;
-		-webkit-margin-end: 0px;
-		font-weight: bold;
-		font-family: impact, sans-serif;
-		font-size: 60px;
-		letter-spacing: 1.2pt;
-		word-spacing: -7pt;
-		z-index: 20px;
-
+	display: block;
+	position: fixed;
+	margin: 0.67em;	
+	font-weight: bold;
+	font-size: 4em;
+	letter-spacing: 1px;
+	z-index: 999;
+	-webkit-transition: color .4s;
 }
+.logo.current0 { color: gray; }
+.logo.current1 { color: orange; }
+.logo.current2 { color: green; }
+.logo.current3 { color: black; }
+.logo.current4 { color: blue; }
 
-@font-face {
-  font-family: Graublau Sans Web;
-  src: url(GraublauWeb.otf) format("opentype");
-}
-/*.lp {
-	margin-top: 10px
-}*/
-
-img {
-	position:absolute;
-	height: 75px;
-	width: 75px;
-	left:96px;
-    top:40px;
-	z-index: 100px;
-}

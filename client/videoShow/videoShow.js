@@ -15,46 +15,16 @@ if (Meteor.isClient) {
 				playerVars: {
 					controls: 0, 
 					showinfo: 0,
-					autoplay: 1
+					autoplay: 1,
+					loop: 1,
+					playlist: 'ErQ6tNEFulg'
 				}, 
 				events: {
 					'onReady': function (event) {
 						event.target.mute();
-					},
-					'onStateChange': onPlayerStateChange
+					}
 				}
 			});
 		}   
 	};
-
-
-	///////////////////////////////////////////////////////////////////////////////////
-	// Thanks to someone who wrote this in http://jsfiddle.net/hnkK7/
-	// Pause video after X seconds
-	var stopPlayAt = 44;
-	var stopPlayTimer = null;
-
-	function onPlayerStateChange(event) {
-		var time, rate, remainingTime;
-		clearTimeout(stopPlayTimer);
-		if (event.data == YT.PlayerState.PLAYING) {
-			time = player.getCurrentTime();
-			// Add .4 of a second to the time in case it's close to the current time
-			// (The API kept returning ~9.7 when hitting play after stopping at 10s)
-			if (time + .4 < stopPlayAt) {
-				rate = player.getPlaybackRate();
-				remainingTime = (stopPlayAt - time) / rate;
-				stopPlayTimer = setTimeout(pauseAndPlay, remainingTime * 1000);
-			}
-		}
-	}
-	function pauseAndPlay() {
-		player.pauseVideo();
-		// Pause 0.5 seconds, then go to 0 seconds
-		setTimeout(function () {
-			player.seekTo(0, true);
-			player.playVideo();
-		}, 500);
-	}
-	////////////////////////////////////////////////////////////////////////////////////
 }

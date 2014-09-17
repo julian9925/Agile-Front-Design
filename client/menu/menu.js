@@ -1,6 +1,6 @@
 
 // true if video is playing, false if video is paused.
-flag = true;
+isVideoPause = false;
 
 Template.menu.events({
     // Use template click event to handle video scale / show menu
@@ -8,7 +8,7 @@ Template.menu.events({
         // Menu button, fade in menu
         $("#toggle").toggleClass("on", 1000);
         $("#menu").toggleClass("on", 1000);
-        if (flag) {
+        if (isVideoPause) {
             // if the video is playing, pause it.
             $("#player").stop().animate({transform: "scale(.7, .7)", opacity: "0.3"});
             player.pauseVideo();
@@ -17,6 +17,6 @@ Template.menu.events({
             $("#player").stop().animate({transform: "scale(1, 1)", opacity: "0.7"});
             player.playVideo();
         }
-        flag = !flag;
+        isVideoPause = !isVideoPause;
     }
 });

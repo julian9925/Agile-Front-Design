@@ -1,23 +1,19 @@
 Template.nav.events({
     'click .nav > a': function(event) {
-    	console.log('nav click');
-    	console.log(event.target);
-    	
-    	console.log(event.target.className);
-    	var mynum=event.target.className;
-    	mynum=mynum.replace('nav','');
-    	console.log(mynum);
+    	var mynum = event.target.className;
+    	mynum = mynum.replace('nav','');
 
-    	$(window).scrollTop($('#pageTwo').offset().top); 
-    	console.log($('#pageTwo').offset().top);
-		console.log('nav click2');
-
+    	$('body').animate({
+            scrollTop: window.innerHeight * (mynum - 1)
+        }, 300); 
+        event.preventDefault();
     }
 });
 
 Template.nav.rendered = function () {
 	var anchors = $('.nav > a');
-	var currentIndex = 0;
+	var currentIndex = null;
+    var jqLogo = $('.logo');
 	$(window).on('scroll', function(event) {
 	    var jqThis = $(this);
 	    var index = Math.round(jqThis.scrollTop() / this.innerHeight);
@@ -27,11 +23,14 @@ Template.nav.rendered = function () {
 	    	return;
 	    }
 
+        isVideoPause = index > 0;
+
         player[index != 0 ? "pauseVideo" : "playVideo"]();
 
 	    // console.log("page change");
     	anchors.removeClass("active");
     	anchors.eq(index).addClass("active");
+        jqLogo.removeClass('current' + currentIndex).addClass('current' + index);
     	currentIndex = index;
 	});
 };
