@@ -7,6 +7,9 @@
 	letter-spacing: 1px;
 	z-index: 999;
 	-webkit-transition: color .4s;
+	   -moz-transition: color .4s;
+		 -o-transition: color .4s;
+			transition: color .4s;
 }
 .logo.current0 { color: gray; }
 .logo.current1 { color: orange; }
