@@ -3,7 +3,7 @@ Template.nav.events({
     	var mynum = event.target.className;
     	mynum = mynum.replace('nav','');
 
-    	$('body').animate({
+    	$('body, html').animate({
             scrollTop: window.innerHeight * (mynum - 1)
         }, 300); 
         event.preventDefault();
