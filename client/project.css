@@ -1,6 +1,6 @@
 body {
-  font-family: Lucida Grande, Arial, sans-serif;
-  font-size: 15px;
+  font-family: impact, sans-serif;
+  font-size: 16px;
   color: #777777;
   background: black;
 }
@@ -14,4 +14,14 @@ a:hover {
 }
 a:active {
   color: #b1d7db;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.bold-text {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 900;
 }
